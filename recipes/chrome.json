@@ -1,0 +1,5 @@
+{
+    "name": "google-chrome",
+    "uses":["yaourt"],
+    "command":"yaourt -S google-chrome"
+}

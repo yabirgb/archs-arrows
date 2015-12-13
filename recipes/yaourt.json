@@ -1,0 +1,5 @@
+{
+    "name": "yaourt",
+    "uses":["pacman"],
+    "command":"sudo pacman -S yaourt"
+}
