@@ -1,0 +1,6 @@
+{
+    "name": "FileZilla",
+    "uses":["pacman"],
+    "command":"pacman -S filezilla",
+    "category": "app"
+}
