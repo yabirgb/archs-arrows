@@ -1,5 +1,0 @@
-{
-    "name": "gnome-tweak-tool",
-    "uses":["pacman"],
-    "command":"sudo pacman -S gnome-tweak-tool"
-}

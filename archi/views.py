@@ -1,11 +1,12 @@
 from django.shortcuts import render
-import json, random, requests
-from .models import Recipe, Update
+import json, random, requests, os, inspect
+from .models import Recipe, Update, Category
 from django.shortcuts import render_to_response, get_object_or_404
 from django.http import HttpResponse
 # Create your views here.
 
-path = "/path/to/place/files/"
+path = "/path/to/folder" #!!!!!!!!!!!!!!!!!
+
 
 base = """#!/bin/bash
 clear
@@ -17,7 +18,7 @@ if [ $(tput colors) ]; then # Checks if terminal supports colors
 fi
 
 echo ====================
-echo "We are not responsible for any damages that may possibly occur while using Arch's Arrows"
+echo "We are not responsible for any damages that may possibly occur while using Arrow"
 echo ====================
 echo "   "
 
@@ -61,6 +62,8 @@ from dateutil import parser
 import random
 from django.template import RequestContext
 def main(request):
+	print path
+	categories = Category.objects.all()
 	objects = Recipe.objects.all()
 	results = {}
 	dic = "abcdefghijklmnopqrstuvwxyz123456890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -78,13 +81,14 @@ def main(request):
 
 	objects = Recipe.objects.all()
 	results["apps"] = objects
+	results["categories"] = categories
 	return render_to_response("arrow/home.html", results, context_instance=RequestContext(request))
 
 #http://stackoverflow.com/questions/2681338/django-serving-a-download-in-a-generic-view
 def file_download(request, filename):
     #song = Song.objects.get(id=song_id)
 	try:
-		fsock = open('/home/yabir/code/python/mywebsite/core/archi/created_files/%s.sh' % filename, 'r')
+		fsock = open(path + '%s.sh' % filename, 'r')
 		response = HttpResponse(fsock, content_type='text')
 		response['Content-Disposition'] = "attachment; filename= %s.sh" % filename
 		return response

@@ -1,6 +1,0 @@
-{
-    "name": "FileZilla",
-    "uses":["pacman"],
-    "command":"sudo pacman -S filezilla",
-    "category": "app"
-}
