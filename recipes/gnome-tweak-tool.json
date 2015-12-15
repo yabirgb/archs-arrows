@@ -1,0 +1,6 @@
+{
+    "name": "gnome-tweak-tool",
+    "uses":["pacman"],
+    "command":"pacman -S gnome-tweak-tool",
+    "category": "Apps"
+}
