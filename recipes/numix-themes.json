@@ -1,0 +1,6 @@
+{
+    "name": "numix-themes",
+    "uses":["pacman"],
+    "command":"sudo pacman -S numix-themes",
+    "category": "Themes"
+}
