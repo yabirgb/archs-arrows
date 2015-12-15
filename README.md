@@ -1,5 +1,7 @@
 # Arch's arrows
 
+**Currently on beta**
+
 ## Concept
 The idea is to create a [website](http://yabirgb.com/arrows/) where to easily choose the one packages you like to install and don't worry about writing commands or looking for them or the packages. Also you can save your scripts and run them in different computers. It should be useful for  the situations where you have to install a large list of packages or when a package is difficult to get installed.
 
