@@ -42,7 +42,7 @@ def join(packages, update, tag):
 			commit += "echo 'Installing {}\n'".format(js["name"])
 			for z in js["command"]:
 				commit += "( \n"
-				commit += z + " --needed" + "\n"
+				commit += z + " --needed --noconfirm" + "\n"
 				commit *= """
 					) &> /dev/null && echo -e "$green OK $endcolor" || echo -e "$red FAILED $endcolor";\n"""
 		else:
