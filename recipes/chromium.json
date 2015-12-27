@@ -1,0 +1,6 @@
+{
+    "name": "Chromium",
+    "uses":["pacman"],
+    "command":"pacman -S chromium",
+    "category": "Apps"
+}

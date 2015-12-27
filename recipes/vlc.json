@@ -1,0 +1,6 @@
+{
+    "name": "Vlc",
+    "uses":["pacman"],
+    "command":"pacman -S vlc",
+    "category": "Apps"
+}

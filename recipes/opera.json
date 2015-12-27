@@ -1,0 +1,6 @@
+{
+    "name": "Opera",
+    "uses":["pacman"],
+    "command":"pacman -S opera",
+    "category": "Apps"
+}

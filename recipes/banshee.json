@@ -1,0 +1,6 @@
+{
+    "name": "Banshee",
+    "uses":["pacman"],
+    "command":"pacman -S banshee",
+    "category": "Apps"
+}

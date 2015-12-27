@@ -1,0 +1,6 @@
+{
+    "name": "Geany",
+    "uses":["pacman"],
+    "command":"pacman -S geany",
+    "category": "Apps"
+}

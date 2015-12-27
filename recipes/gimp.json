@@ -1,0 +1,6 @@
+{
+    "name": "Gimp",
+    "uses":["pacman"],
+    "command":"pacman -S gimp",
+    "category": "Apps"
+}
