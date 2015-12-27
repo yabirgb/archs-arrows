@@ -1,0 +1,6 @@
+{
+    "name": "Openssh",
+    "uses":["pacman"],
+    "command":"pacman -S openssh",
+    "category": "Apps"
+}

@@ -1,0 +1,6 @@
+{
+    "name": "Xclip",
+    "uses":["pacman"],
+    "command":"pacman -S xclip",
+    "category": "Apps"
+}
