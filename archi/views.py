@@ -47,7 +47,7 @@ def join(packages, update, tag):
 					) &> /dev/null && echo -e "$green OK $endcolor" || echo -e "$red FAILED $endcolor";\n"""
 		else:
 			commit += "echo 'Installing {}'\n".format(js["name"])
-			commit += """( \n{}\n) &> /dev/null && echo -e "$green OK $endcolor" || echo -e "$red FAILED $endcolor"; \n""".format(js["command"] + " --needed")
+			commit += """( \n{}\n) &> /dev/null && echo -e "$green OK $endcolor" || echo -e "$red FAILED $endcolor"; \n""".format(js["command"] + " --noconfirm --needed")
 
 	if update:
 		commit += """echo "Upgrading old packages"\n(\npacman -Syu \n) &> /dev/null && echo -e "$green OK $endcolor" || echo -e "$red FAILED $endcolor";\n"""
